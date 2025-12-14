@@ -1,0 +1,23 @@
+{
+  "name": "@monorepo/index",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "build": "tsc --build",
+    "lint": "eslint ./**/src",
+    "lint:fix": "eslint ./**/src --fix",
+    "clean": "find . -type d \\( -name 'node_modules' -o -name 'dist' \\) -prune -exec rm -rf {} + && find . -type f -name 'package-lock.json' -exec rm -f {} +"
+  },
+  "workspaces": [
+    "apps/*",
+    "backend",
+    "packages/*"
+  ],
+  "dependencies": {
+    "@monorepo/dev-dependencies": "*"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}

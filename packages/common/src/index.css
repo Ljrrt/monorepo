@@ -1,0 +1,505 @@
+/* Para analizar desde el ROOT del monorepo todo lo que tiene tailwind */
+
+@import 'tailwindcss' source("../../..");
+
+@plugin "@iconify/tailwind4";
+
+@plugin "tailwindcss-animate";
+
+@theme {
+  --font-header: 'general-sans', sans-serif;
+  --font-body: 'general-sans', sans-serif;
+  --font-test: 'digital-7-mono', sans-serif;
+  --font-unknown: 'unknown', sans-serif;
+
+  --shadow-2xs: 0 0 1px rgba(0, 0, 0, 0.05);
+  --shadow-xs: 0 0 2px rgba(0, 0, 0, 0.05);
+  --shadow-sm: 0 0 3px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 0 6px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 0 15px rgba(0, 0, 0, 0.1);
+  --shadow-xl: 0 0 25px rgba(0, 0, 0, 0.1);
+  --shadow-2xl: 0 0 50px rgba(0, 0, 0, 0.25);
+  --shadow-3xl: 0 0 35px rgba(0, 0, 0, 0.25);
+
+  --color-neutral-1: #111111;
+  --color-neutral-2: #191919;
+  --color-neutral-3: #222222;
+  --color-neutral-4: #2a2a2a;
+  --color-neutral-5: #313131;
+  --color-neutral-6: #3a3a3a;
+  --color-neutral-7: #484848;
+  --color-neutral-8: #606060;
+  --color-neutral-9: #6e6e6e;
+  --color-neutral-10: #7b7b7b;
+  --color-neutral-11: #b4b4b4;
+  --color-neutral-12: #eeeeee;
+
+  --color-neutralA-1: #000000;
+  --color-neutralA-2: #FFFFFF09;
+  --color-neutralA-3: #FFFFFF12;
+  --color-neutralA-4: #FFFFFF1B;
+  --color-neutralA-5: #FFFFFF22;
+  --color-neutralA-6: #FFFFFF2C;
+  --color-neutralA-7: #FFFFFF3B;
+  --color-neutralA-8: #FFFFFF55;
+  --color-neutralA-9: #FFFFFF64;
+  --color-neutralA-10: #FFFFFF72;
+  --color-neutralA-11: #FFFFFFAF;
+  --color-neutralA-12: #FFFFFFED;
+
+  --color-shadows-1: #0000000D;
+  --color-shadows-2: #0000001A;
+  --color-shadows-3: #00000026;
+  --color-shadows-4: #00000033;
+  --color-shadows-5: #0000004D;
+  --color-shadows-6: #00000066;
+  --color-shadows-7: #00000080;
+  --color-shadows-8: #00000099;
+  --color-shadows-9: #000000B3;
+  --color-shadows-10: #000000CC;
+  --color-shadows-11: #000000E6;
+  --color-shadows-12: #000000F2;
+
+  --color-accent-1: #0e1512;
+  --color-accent-2: #121b17;
+  --color-accent-3: #132d21;
+  --color-accent-4: #113b29;
+  --color-accent-5: #174933;
+  --color-accent-6: #20573e;
+  --color-accent-7: #28684a;
+  --color-accent-8: #2f7c57;
+  --color-accent-9: #30a46c;
+  --color-accent-10: #33b074;
+  --color-accent-11: #3dd68c;
+  --color-accent-12: #b1f1cb;
+
+  --color-error-1: #191113;
+  --color-error-2: #1e1517;
+  --color-error-3: #3a141e;
+  --color-error-4: #4e1325;
+  --color-error-5: #5e1a2e;
+  --color-error-6: #6f2539;
+  --color-error-7: #883447;
+  --color-error-8: #b3445a;
+  --color-error-9: #e54666;
+  --color-error-10: #ec5a72;
+  --color-error-11: #ff949d;
+  --color-error-12: #fed2e1;
+
+  --color-success-1: #0d1512;
+  --color-success-2: #121c18;
+  --color-success-3: #0f2e22;
+  --color-success-4: #0b3b2c;
+  --color-success-5: #114837;
+  --color-success-6: #1b5745;
+  --color-success-7: #246854;
+  --color-success-8: #2a7e68;
+  --color-success-9: #29a383;
+  --color-success-10: #27b08b;
+  --color-success-11: #1fd8a4;
+  --color-success-12: #adf0d4;
+
+  --color-digo-lime: #BDF279;
+  --color-digo-green: #79F2A9;
+  --color-digo-purple: #985EFF;
+  --color-digo-blue: #58C2E3;
+
+}
+
+@utility typo-weight-100 {
+  @apply font-thin;
+}
+
+@utility typo-weight-200 {
+  @apply font-extralight;
+}
+
+@utility typo-weight-300 {
+  @apply font-light;
+}
+
+@utility typo-weight-400 {
+  @apply font-normal;
+}
+
+@utility typo-weight-500 {
+  @apply font-medium;
+}
+
+@utility typo-weight-600 {
+  @apply font-semibold;
+}
+
+@utility typo-weight-700 {
+  @apply font-bold;
+}
+
+@utility typo-weight-800 {
+  @apply font-extrabold;
+}
+
+@utility typo-weight-900 {
+  @apply font-black;
+}
+
+
+@utility typo-header {
+  @apply font-header typo-weight-600 antialiased leading-none whitespace-nowrap;
+}
+
+@utility typo-body {
+  @apply font-body typo-weight-500 antialiased leading-none text-wrap;
+}
+
+@utility typo-0 {
+  @apply typo-body text-[10px];
+}
+
+@utility typo-1 {
+  @apply typo-body text-xs;
+}
+
+@utility typo-2 {
+  @apply typo-body text-sm;
+}
+
+@utility typo-3 {
+  @apply typo-body text-base;
+}
+
+@utility typo-4 {
+  @apply typo-body text-lg;
+}
+
+@utility typo-5 {
+  @apply typo-body text-xl;
+}
+
+@utility typo-6 {
+  @apply typo-body text-2xl;
+}
+
+@utility typo-7 {
+  @apply typo-body text-3xl;
+}
+
+@utility typo-8 {
+  @apply typo-body text-4xl;
+}
+
+@utility typo-9 {
+  @apply typo-body text-5xl;
+}
+
+@utility typo-10 {
+  @apply typo-body text-6xl;
+}
+
+@utility typo-11 {
+  @apply typo-body text-7xl;
+}
+
+@utility typo-12 {
+  @apply typo-body text-8xl;
+}
+
+@utility typo-13 {
+  @apply typo-body text-9xl;
+}
+
+@utility typo-14 {
+  @apply typo-body text-[10rem];
+}
+
+@utility typo-15 {
+  @apply typo-body text-[12rem];
+}
+
+@utility typo-16 {
+  @apply typo-body text-[14rem];
+}
+
+
+
+
+@utility filter-none {
+  filter: none;
+}
+
+@utility flex-col-center {
+  @apply flex flex-col justify-center items-center align-middle;
+}
+
+@utility grid-hor-center {
+  @apply grid grid-flow-col items-center;
+}
+
+@utility grid-ver-center {
+  @apply grid grid-flow-row items-center;
+}
+
+@utility flex-row-center {
+  @apply flex flex-row justify-center items-center align-middle;
+}
+
+@utility cs-border-dashed {
+  @apply border border-dashed border-neutralA-4;
+}
+
+@utility cs-disabled {
+    @apply disabled:pointer-events-none disabled:opacity-50 data-disabled:pointer-events-none data-disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50;
+  }
+  
+@utility cs-transition {
+    @apply transition-all duration-200 ease-in-out;
+  }
+  
+@utility cs-focus {
+    @apply outline outline-offset-0 focus-visible:outline-1 outline-accent-9;
+  }
+  
+@utility cs-focus-input {
+    @apply focus:ring-1 focus:ring-accent-5 focus:border-accent-9;
+  }
+  
+@utility cs-has-error-input {
+    @apply ring-2 border-error-9 ring-error-3;
+  }
+
+@utility cs-backdrop-panel {
+  @apply border-neutralA-4 bg-neutral-1/60 text-neutral-11 backdrop-blur-lg rounded-lg border shadow-md shadow-shadows-12/25;
+  }
+
+@utility animate-accordion-down {
+  animation: accordion-down 0.2s ease-out;
+}
+
+@utility animate-accordion-up {
+  animation: accordion-up 0.2s ease-out;
+}
+
+@utility animate-collapsible-down {
+  animation: collapsible-down 0.2s ease-out;
+}
+
+@utility animate-collapsible-up {
+  animation: collapsible-up 0.2s ease-out;
+}
+
+@utility no-scrollbar {
+  @apply [scrollbar-width:none] [&::-webkit-scrollbar]:hidden;
+}
+
+@utility digo-gradient-colors {
+  @apply from-digo-lime via-digo-blue to-digo-purple;
+} 
+
+
+
+
+@layer base {
+
+  * {
+    @apply transition-colors duration-200;
+  }
+
+  @font-face {
+    font-family: 'clash-grotesk-variable';
+    font-weight: 200 700;
+    font-style: normal;
+    font-display: swap;
+    src: url(@monorepo/common/public/fonts/clash-grotesk-variable.ttf) format('truetype');
+  }
+
+  @font-face {
+    font-family: 'nippo';
+    font-weight: 200 700;
+    font-style: normal;
+    font-display: swap;
+    src: url(@monorepo/common/public/fonts/nippo.ttf) format('truetype');
+  }
+
+  @font-face {
+    font-family: 'being';
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+    src: url(@monorepo/common/public/fonts/being.otf) format('opentype');
+  }
+
+  @font-face {
+    font-family: 'Aalto';
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+    src: url(@monorepo/common/public/fonts/aalto.otf) format('opentype');
+  }
+
+  @font-face {
+    font-family: 'humane-variable';
+    font-weight: 200 800;
+    font-style: normal;
+    font-display: swap;
+    src: url(@monorepo/common/public/fonts/humane-variable.ttf) format('truetype');
+  }
+
+  @font-face {
+    font-family: 'general-sans';
+    font-weight: 200 800;
+    font-style: normal;
+    font-display: swap;
+    src: url(@monorepo/common/public/fonts/general-sans.ttf) format('truetype');
+  }
+
+  @font-face {
+    font-family: 'karmatic-arcade-regular';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(@monorepo/common/public/fonts/karmatic-arcade-regular.ttf) format('truetype');
+  }
+
+  @font-face {
+    font-family: 'kode-mono-vf';
+    font-style: normal;
+    font-weight: 400 700;
+    font-display: swap;
+    src: url(@monorepo/common/public/fonts/kode-mono-vf.ttf) format('truetype');
+  }
+
+  @font-face {
+    font-family: 'digital-7-mono';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(@monorepo/common/public/fonts/digital-7-mono.ttf) format('truetype');
+  }
+
+  @font-face {
+    font-family: 'pixelony';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(@monorepo/common/public/fonts/pixelony.ttf) format('truetype');
+  }
+
+  @font-face {
+    font-family: 'unknown';
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+    src: url(@monorepo/common/public/fonts/unknown.otf) format('opentype');
+  }
+
+  @font-face {
+    font-family: 'benzol';
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+    src: url(@monorepo/common/public/fonts/benzol.otf) format('opentype');
+  }
+
+  @font-face {
+    font-family: 'half';
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+    src: url(@monorepo/common/public/fonts/half.otf) format('opentype');
+  }
+
+  @font-face {
+    font-family: 'miratrix';
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+    src: url(@monorepo/common/public/fonts/miratrix.otf) format('opentype');
+  }
+
+  @font-face {
+    font-family: 'triakis';
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+    src: url(@monorepo/common/public/fonts/triakis.otf) format('opentype');
+  }
+
+  @font-face {
+    font-family: 'yeager';
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+    src: url(@monorepo/common/public/fonts/yeager.otf) format('opentype');
+  }
+
+  @font-face {
+    font-family: 'disket';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(@monorepo/common/public/fonts/disket.ttf) format('truetype');
+  }
+
+  @font-face {
+    font-family: 'heming';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(@monorepo/common/public/fonts/heming.ttf) format('truetype');
+  }
+
+  @font-face {
+    font-family: 'obrazec';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(@monorepo/common/public/fonts/obrazec.ttf) format('truetype');
+  }
+  
+}
+
+@layer utilities {
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: #ffffff50 transparent;
+  }
+}
+
+
+@keyframes accordion-down {
+  from {
+    height: 0;
+  }
+  to {
+    height: var(--radix-accordion-content-height);
+  }
+}
+
+
+@keyframes accordion-up {
+  from {
+    height: var(--radix-accordion-content-height);
+  }
+  to {
+    height: 0;
+  }
+}
+
+@keyframes collapsible-down {
+  from {
+    height: 0;
+  }
+  to {
+    height: var(--radix-collapsible-content-height);
+  }
+}
+
+@keyframes collapsible-up {
+  from {
+    height: var(--radix-collapsible-content-height);
+  }
+  to {
+    height: 0;
+  }
+}
+
+

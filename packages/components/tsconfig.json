@@ -1,0 +1,17 @@
+{
+  "extends": "../../tsconfig.app.json",
+  "compilerOptions": {
+    "outDir": "dist",
+    "baseUrl": ".",
+    "composite": true,
+    "resolveJsonModule": true
+  },
+  "include": [
+    "src"
+  ],
+  "references": [
+    {
+      "path": "../common"
+    }
+  ]
+}

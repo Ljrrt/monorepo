@@ -1,0 +1,11 @@
+{
+  "extends": "../tsconfig.app.json",
+  "compilerOptions": {
+    "jsxImportSource": "hono/jsx",
+    "outDir": "./dist",
+    "composite": false
+  },
+  "exclude": [
+    "node_modules"
+  ]
+}

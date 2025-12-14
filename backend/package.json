@@ -1,0 +1,36 @@
+{
+  "name": "@monorepo/backend",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "",
+    "build": "tsc --noEmit && tsup",
+    "start": "node ./dist/index.js"
+  },
+  "dependencies": {
+    "@ai-sdk/amazon-bedrock": "^3.0.50",
+    "@ai-sdk/google-vertex": "^3.0.27",
+    "@monorepo/common": "*",
+    "@types/dmx": "^0.2.3",
+    "ai": "^5.0.47",
+    "dmx": "^0.25.1",
+    "dotenv": "^17.2.3",
+    "hono": "^4.9.8"
+  },
+  "devDependencies": {
+    "@monorepo/dev-dependencies": "*",
+    "tsup": "^8.5.0"
+  },
+  "tsup": {
+    "entry": [
+      "src/index.ts"
+    ],
+    "noExternal": [
+      "@monorepo/common"
+    ],
+    "splitting": false,
+    "sourcemap": true,
+    "clean": true
+  }
+}

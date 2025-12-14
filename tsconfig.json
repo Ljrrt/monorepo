@@ -1,0 +1,21 @@
+{
+  "extends": "./tsconfig.app.json",
+  "files": [],
+  "references": [
+    {
+      "path": "./apps/design-system"
+    },
+    {
+      "path": "./backend"
+    },
+    {
+      "path": "./packages/common"
+    },
+    {
+      "path": "./packages/components"
+    },
+    {
+      "path": "./packages/services"
+    }
+  ]
+}
