@@ -4,7 +4,6 @@ import { removeBackground } from '@imgly/background-removal';
 
 import { formatDistanceToNow, parseISO } from 'date-fns';
 import { decode, encode }                from 'base64-arraybuffer';
-import html2canvas                       from 'html2canvas';
 
 export class CommonHelpers {
   public static copyToClipboard(text: string) {
@@ -181,23 +180,6 @@ export class CommonHelpers {
     };
 
     input.click();
-  }
-
-  public static async divToPng(element: HTMLDivElement): Promise<File> {
-    const canvas = await html2canvas(element, {
-      backgroundColor:        'transparent',
-      useCORS:                true,
-      allowTaint:             false,
-      logging:                false,
-      foreignObjectRendering: false,
-      scale:                  1,
-    });
-
-    const blob = await new Promise<Blob>(resolve => canvas.toBlob(b => resolve(b!)));
-
-    const file = new File([blob], 'capture.png', { type: 'image/png' });
-
-    return file;
   }
 
   public static formatNumberTwoDigits(number: number): string {
