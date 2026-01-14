@@ -6,6 +6,9 @@
       "path": "./apps/base-project"
     },
     {
+      "path": "./apps/design-system"
+    },
+    {
       "path": "./backend"
     },
     {

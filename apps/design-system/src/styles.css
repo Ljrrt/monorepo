@@ -1,0 +1,43 @@
+@import '@monorepo/common/src';
+
+
+@theme {
+  --font-test: 'general-sans', monospace;
+
+
+  --color-neutral-1: #111111;
+  --color-neutral-2: #191919;
+  --color-neutral-3: #222222;
+  --color-neutral-4: #2a2a2a;
+  --color-neutral-5: #313131;
+  --color-neutral-6: #3a3a3a;
+  --color-neutral-7: #484848;
+  --color-neutral-8: #606060;
+  --color-neutral-9: #6e6e6e;
+  --color-neutral-10: #7b7b7b;
+  --color-neutral-11: #b4b4b4;
+  --color-neutral-12: #eeeeee;
+
+  --color-accent-1: #0B130D;
+  --color-accent-2: #0F1B12;
+  --color-accent-3: #0F2D19;
+  --color-accent-4: #0B3C1F;
+  --color-accent-5: #0C4B26;
+  --color-accent-6: #0D5A2E;
+  --color-accent-7: #0D6B37;
+  --color-accent-8: #028041;
+  --color-accent-9: #00FE86;
+  --color-accent-10: #00F37C;
+  --color-accent-11: #00EF78;
+  --color-accent-12: #ABFEC2;
+
+}
+
+@utility typo-test {
+  @apply font-test typo-weight-500 antialiased leading-none whitespace-nowrap;
+}
+
+
+
+
+
