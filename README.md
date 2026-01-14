@@ -6,6 +6,7 @@ This monorepo is a prototype for a modular, full-stack application built with Ty
 - **packages/components**: Reusable UI components and effects for building interfaces.
 - **packages/services**: Backend and client-side service logic, including API clients and realtime communication. 
 - **backend**: Server-side code, including API routes for text, image, and multimodal generation.
+- **apps/**: Frontend apps.
 
 The system uses Supabase for realtime events and storage, and integrates AI-powered image and text generation. The frontend communicates with the backend via REST APIs and realtime channels through supabase Brodcast.
 
