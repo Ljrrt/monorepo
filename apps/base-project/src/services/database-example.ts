@@ -8,7 +8,7 @@ interface ExampleRecord  {
 
 export default class DatabaseExample extends Database  {
   constructor() {
-    super(CONFIG.databases.words);
+    super(CONFIG.databases.example);
   }
 
   public async getAll(): Promise<ExampleRecord[]> {

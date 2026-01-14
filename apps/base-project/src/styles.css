@@ -2,10 +2,7 @@
 
 
 @theme {
-  --font-header-tablet: 'aalto', monospace;
-  --font-body: 'general-sans', monospace;
-  --font-number: 'digital-7-mono', monospace;
-  --font-terminal: 'pixelony', monospace;
+  --font-test: 'general-sans', monospace;
 
 
   --color-neutral-1: #111111;
@@ -36,17 +33,10 @@
 
 }
 
-@utility typo-number {
-  @apply font-number typo-weight-500 antialiased leading-none whitespace-nowrap;
+@utility typo-test {
+  @apply font-test typo-weight-500 antialiased leading-none whitespace-nowrap;
 }
 
-@utility typo-terminal {
-  @apply font-terminal typo-weight-500 antialiased leading-none whitespace-nowrap tracking-widest;
-}
-
-@utility typo-header-tablet {
-  @apply font-header-tablet typo-weight-500 antialiased uppercase leading-none whitespace-nowrap tracking-widest;
-}
 
 
 

@@ -1,5 +1,5 @@
 export enum EnumExample {
-  FIRST  = 'First',
+  FIRST  = 'FIRST',
   SECOND = 'SECOND',
 }
 
