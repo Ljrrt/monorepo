@@ -3,7 +3,7 @@
   "files": [],
   "references": [
     {
-      "path": "./apps/design-system"
+      "path": "./apps/base-project"
     },
     {
       "path": "./backend"

@@ -1,6 +1,9 @@
 import { cors } from 'hono/cors';
 
-const allowedOrigins = ['https://ljrrt-monorepo-design-system.vercel.app'];
+const allowedOrigins = [
+  'https://ljrrt-monorepo-design-system.vercel.app',
+  'https://ljrrt-monorepo-base-project.vercel.app',
+];
 
 export const corsMiddleware = cors({
   origin: (origin) => {

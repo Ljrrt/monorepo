@@ -1,0 +1,24 @@
+{
+  "name": "@monorepo/base-project",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "main": "src/index.ts",
+  "types": "src/index.ts",
+  "scripts": {
+    "dev": "vite --configLoader runner --host",
+    "start": "vite --configLoader runner --host",
+    "build": "vite build --configLoader runner",
+    "lint": "eslint ./src/",
+    "lint:fix": "eslint ./src/ --fix",
+    "preview": "vite preview --configLoader runner"
+  },
+  "dependencies": {
+    "@monorepo/common": "*",
+    "@monorepo/components": "*",
+    "@monorepo/services": "*"
+  },
+  "devDependencies": {
+    "@monorepo/dev-dependencies": "*"
+  }
+}
