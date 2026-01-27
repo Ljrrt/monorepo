@@ -4,6 +4,7 @@ import tailwindcss                from '@tailwindcss/vite';
 import tsconfigPaths              from 'vite-tsconfig-paths';
 import { DynamicPublicDirectory } from 'vite-multiple-assets';
 import svgr                       from 'vite-plugin-svgr';
+import mdx                        from '@mdx-js/rollup';
 
 export type DigoViteConfigProperties = {
   includeAssetsFrom: string[];
@@ -26,6 +27,7 @@ export function digoViteConfig(properties: DigoViteConfigProperties) {
         includeAssetsFrom.map(mod => `../${mod}/public/**`),
       ),
       svgr(),
+      mdx({}),
     ],
     server: {
       port:         port,

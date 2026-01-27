@@ -5,6 +5,8 @@
   "type": "module",
   "dependencies": {
     "@eslint/js": "^9.22.0",
+    "@mdx-js/react": "^3.1.1",
+    "@mdx-js/rollup": "^3.1.1",
     "@preact/signals-react-transform": "^0.5.1",
     "@stylistic/eslint-plugin": "^2.8.0",
     "@stylistic/eslint-plugin-jsx": "^2.8.0",
