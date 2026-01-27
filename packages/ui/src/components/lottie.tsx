@@ -1,5 +1,5 @@
 import { cn }   from '@monorepo/common';
-import { Tint } from '@monorepo/components';
+import { Tint } from '@monorepo/ui';
 
 import { ComponentPropsWithoutRef } from 'react';
 import LottieUI                     from 'lottie-react';

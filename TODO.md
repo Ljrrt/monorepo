@@ -2,7 +2,7 @@
 
 ## Folder Structure
 
-packages/components/
+packages/ui/
 └── src/
 ├── ui/
 │   ├── spinner.tsx           # Component
@@ -65,13 +65,13 @@ description: A loading indicator with multiple animation styles.
 ## Installation
 
 \`\`\`bash
-npm install @monorepo/components
+npm install @monorepo/ui
 \`\`\`
 
 ## Usage
 
 \`\`\`tsx
-import { Spinner } from "@monorepo/components"
+import { Spinner } from "@monorepo/ui"
 
 <Spinner type="dotSpinner" size={40} />
 \`\`\`
@@ -95,14 +95,14 @@ Each example is a simple React component in apps/design-system/src/examples/:
 
 
 // examples/spinner-demo.tsx
-import { Spinner } from "@monorepo/components"
+import { Spinner } from "@monorepo/ui"
 
 export default function SpinnerDemo() {
   return <Spinner type="dotSpinner" size={40} />
 }
 
 // examples/spinner-sizes.tsx
-import { Spinner } from "@monorepo/components"
+import { Spinner } from "@monorepo/ui"
 
 export default function SpinnerSizes() {
   return (
@@ -116,7 +116,7 @@ export default function SpinnerSizes() {
 }
 Setup Steps
 Add MDX support to Vite (@mdx-js/rollup)
-Configure Vite to read .mdx from packages/components/src/
+Configure Vite to read .mdx from packages/ui/src/
 Create mdx-components.tsx mapping custom components
 Build ComponentPreview to load examples dynamically
 Write first .mdx as template

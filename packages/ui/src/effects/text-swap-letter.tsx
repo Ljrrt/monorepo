@@ -1,6 +1,6 @@
 import { cn } from '@monorepo/common';
 
-import { LetterSwap } from '@monorepo/components';
+import { LetterSwap } from '@monorepo/ui';
 
 interface TextSwapLetterProperties {
   word:       string;

@@ -2,7 +2,7 @@ import { useEffect, useRef, useState, CSSProperties } from 'react';
 
 import gsap from 'gsap';
 
-import { animationEffects } from '@monorepo/components/src/other/image-transition-effects';
+import { animationEffects } from '@monorepo/ui/src/other/image-transition-effects';
 import { cn }               from '@monorepo/common';
 
 export enum ImageTransitionType {

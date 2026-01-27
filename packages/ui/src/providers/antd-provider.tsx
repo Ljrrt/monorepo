@@ -1,5 +1,5 @@
 import { CommonHelpers } from '@monorepo/common';
-import { useTheme }      from '@monorepo/components';
+import { useTheme }      from '@monorepo/ui';
 
 import { ReactNode } from 'react';
 

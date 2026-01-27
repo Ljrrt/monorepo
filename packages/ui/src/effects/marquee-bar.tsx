@@ -1,6 +1,6 @@
 import { cn, ICONS } from '@monorepo/common';
 
-import { Icon, Marquee, TextScramble } from '@monorepo/components';
+import { Icon, Marquee, TextScramble } from '@monorepo/ui';
 
 interface MarqueeBarProperties {
   direction?: 'left' | 'right' | 'up' | 'down';

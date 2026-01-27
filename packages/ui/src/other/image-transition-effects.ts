@@ -1,6 +1,6 @@
 import gsap from 'gsap';
 
-import { ImageTransitionType } from '@monorepo/components';
+import { ImageTransitionType } from '@monorepo/ui';
 
 export type ImageTransitionEffect = (
   current: HTMLDivElement,

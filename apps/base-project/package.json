@@ -15,7 +15,7 @@
   },
   "dependencies": {
     "@monorepo/common": "*",
-    "@monorepo/components": "*",
+    "@monorepo/ui": "*",
     "@monorepo/services": "*"
   },
   "devDependencies": {
