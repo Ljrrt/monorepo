@@ -15,6 +15,9 @@ const components: MDXComponents = {
     <pre className="bg-neutral-1 border-neutral-6 typo-1 text-neutral-11 my-4 overflow-x-auto rounded-lg border p-4" {...props} />
   ),
   table: props => <table className="my-6 w-full border-collapse" {...props} />,
+  thead: props => <thead className="bg-neutral-3" {...props} />,
+  tr:    props => <tr className="border-neutral-6 border-b last:border-0" {...props} />,
+  tbody: props => <tbody {...props} />,
   th:    props => <th className="bg-neutral-3 border-neutral-6 typo-2 text-neutral-11 border p-3 text-left" {...props} />,
   td:    props => <td className="border-neutral-6 typo-2 text-neutral-10 border p-3" {...props} />,
   ul:    props => <ul className="text-neutral-10 mb-4 list-inside list-disc" {...props} />,
