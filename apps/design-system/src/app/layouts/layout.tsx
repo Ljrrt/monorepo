@@ -5,7 +5,7 @@ export function Layout() {
 
     <div className="bg-neutral-1 text-neutral-12 fixed flex h-dvh w-dvw overflow-hidden">
 
-      <div className="size-full">
+      <div className="size-full overflow-auto">
 
         <Outlet />
 
