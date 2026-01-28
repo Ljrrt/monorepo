@@ -38,9 +38,9 @@ export function AccordionItem(properties: AccordionPrimitive.Item.Props) {
 /* Trigger */
 
 const triggerClasses = cn([
-  'group bg-neutral-4 relative flex w-full items-center justify-between gap-4 px-3 py-2 text-left',
+  'group/accordion-trigger bg-neutral-4 relative flex w-full items-center justify-between gap-4 px-3 py-2 text-left',
   'hover:bg-neutral-5',
-  'cs-focus cs-transition',
+  'cs-focus cs-transition cs-disabled',
 ]);
 
 export function AccordionTrigger(properties: AccordionPrimitive.Trigger.Props) {
