@@ -27,7 +27,9 @@ export function digoViteConfig(properties: DigoViteConfigProperties) {
         includeAssetsFrom.map(mod => `../${mod}/public/**`),
       ),
       svgr(),
-      mdx({}),
+      mdx({
+        providerImportSource: '@mdx-js/react',
+      }),
     ],
     server: {
       port:         port,
