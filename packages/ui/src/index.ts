@@ -1,3 +1,5 @@
+/* Effects */
+
 export * from '@monorepo/ui/src/effects/border-trail';
 export * from '@monorepo/ui/src/effects/dark-veil';
 export * from '@monorepo/ui/src/effects/dot-grid';
@@ -44,3 +46,7 @@ export * from '@monorepo/ui/src/components/spacer';
 export * from '@monorepo/ui/src/components/spinner';
 export * from '@monorepo/ui/src/components/text-area';
 export * from '@monorepo/ui/src/components/tint';
+
+/* Base UI */
+
+export * from '@monorepo/ui/src/components/base-ui/accordion';
