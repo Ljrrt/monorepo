@@ -5,7 +5,7 @@ import { Accordion as AccordionPrimitive } from '@base-ui/react/accordion';
 
 /* Accordion */
 
-const accordionClasses = 'text-neutral-11 border border-neutral-6 bg-neutral-2';
+const accordionClasses = 'max-w-[calc(100vw-8rem)] flex flex-col justify-center border border-neutral-6';
 
 export function Accordion(properties: AccordionPrimitive.Root.Props) {
   const { className, ...props } = properties;
