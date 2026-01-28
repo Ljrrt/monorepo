@@ -1,9 +1,5 @@
-export enum EnumExample {
-  FIRST  = 'FIRST',
-  SECOND = 'SECOND',
-}
-
-export interface InterfaceExample {
-  first:  number;
-  second: string;
+export interface Frontmatter {
+  title:        string;
+  subtitle?:    string;
+  description?: string;
 }

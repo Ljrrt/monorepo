@@ -1,7 +1,9 @@
-import { ComponentType, Suspense, lazy, useMemo } from 'react';
-import { useParams }                              from 'react-router-dom';
+import { DocumentHeader }                                   from 'app/components/document-header';
+import { ComponentType, Suspense, lazy, useMemo, useState } from 'react';
+import { useParams }                                        from 'react-router-dom';
+import { Frontmatter }                                      from 'utils';
 
-const modules = import.meta.glob<{ default: ComponentType; }>(
+const modules = import.meta.glob<{ default: ComponentType; frontmatter?: Frontmatter; }>(
   '../docs/*.mdx',
 );
 
@@ -15,12 +17,19 @@ const modulesBySlug = Object.fromEntries(
 );
 
 export function DocumentationPage() {
-  const { slug } = useParams<{ slug: string; }>();
+  const { slug }                      = useParams<{ slug: string; }>();
+  const [frontmatter, setFrontmatter] = useState<Frontmatter | undefined>(undefined);
 
   const MDXContent = useMemo(() => {
     const loader = modulesBySlug[slug ?? ''];
+
     if (!loader) return null;
-    return lazy(loader);
+
+    return lazy(async () => {
+      const mod = await loader();
+      setFrontmatter(mod.frontmatter ?? undefined);
+      return mod;
+    });
   }, [slug]);
 
   if (!MDXContent) {
@@ -34,6 +43,7 @@ export function DocumentationPage() {
 
   return (
     <Suspense fallback={<div className="text-neutral-10">Loading...</div>}>
+      { frontmatter && <DocumentHeader title={frontmatter.title} subtitle={frontmatter.subtitle} />}
       <MDXContent />
     </Suspense>
   );

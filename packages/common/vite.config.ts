@@ -6,6 +6,8 @@ import { DynamicPublicDirectory } from 'vite-multiple-assets';
 import svgr                       from 'vite-plugin-svgr';
 import mdx                        from '@mdx-js/rollup';
 import remarkGfm                  from 'remark-gfm';
+import remarkFrontmatter          from 'remark-frontmatter';
+import remarkMdxFrontmatter       from 'remark-mdx-frontmatter';
 
 export type DigoViteConfigProperties = {
   includeAssetsFrom: string[];
@@ -30,7 +32,7 @@ export function digoViteConfig(properties: DigoViteConfigProperties) {
       svgr(),
       mdx({
         providerImportSource: '@mdx-js/react',
-        remarkPlugins:        [remarkGfm],
+        remarkPlugins:        [remarkGfm, remarkFrontmatter, remarkMdxFrontmatter],
 
       }),
     ],

@@ -3,9 +3,11 @@ import { MDXProvider as MDXJSProvider } from '@mdx-js/react';
 import type { MDXComponents }           from 'mdx/types';
 
 import { ComponentPreview } from 'app/components/component-preview';
+import { DocumentHeader }   from 'app/components/document-header';
 
 const components: MDXComponents = {
   ComponentPreview,
+  DocumentHeader,
   h1:   props => <h1 className="typo-header text-neutral-12 mb-6 text-4xl" {...props} />,
   h2:   props => <h2 className="typo-header text-neutral-12 mt-10 mb-4 text-2xl" {...props} />,
   h3:   props => <h3 className="typo-header text-neutral-11 mt-6 mb-3 text-xl" {...props} />,
