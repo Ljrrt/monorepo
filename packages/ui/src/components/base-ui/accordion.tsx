@@ -38,7 +38,7 @@ export function AccordionItem(properties: AccordionPrimitive.Item.Props) {
 /* Trigger */
 
 const triggerClasses = cn([
-  'group/accordion-trigger bg-neutral-4 relative flex w-full items-center justify-between gap-4 px-3 py-2 text-left',
+  'group bg-neutral-4 relative flex w-full items-center justify-between gap-4 px-3 py-2 text-left',
   'hover:bg-neutral-5',
   'cs-focus cs-transition cs-disabled',
 ]);
@@ -62,7 +62,7 @@ export function AccordionTrigger(properties: AccordionPrimitive.Trigger.Props) {
 
 /* Content */
 
-const contentClasses = cn(['text-neutral-11 p-3 ']);
+const contentClasses = cn(['text-neutral-11 border-neutral-6 border-t p-3 ']);
 
 export function AccordionContent(properties: AccordionPrimitive.Panel.Props) {
   const { className, children, ...props } = properties;
