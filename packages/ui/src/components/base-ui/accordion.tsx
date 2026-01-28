@@ -21,10 +21,7 @@ export function Accordion(properties: AccordionPrimitive.Root.Props) {
 
 /* Accordion Item */
 
-const itemClasses = cn([
-  'border-b last:border-none typo-1',
-  'text-neutral-11 border-neutral-6 text-left',
-]);
+const itemClasses = 'border-b last:border-none typo-2 border-neutral-6 text-left';
 
 export function AccordionItem(properties: AccordionPrimitive.Item.Props) {
   const { className, ...props } = properties;
@@ -41,9 +38,9 @@ export function AccordionItem(properties: AccordionPrimitive.Item.Props) {
 /* Trigger */
 
 const triggerClasses = cn([
-  'group/accordion-trigger flex flex-1 p-3 items-center border border-transparent justify-between gap-2 outline-none [&[data-state=open]>*:last-child]:rotate-180 text-neutral-11',
-  'hover:bg-neutral-3',
-  'cs-transition cs-disabled',
+  'group bg-neutral-4 relative flex w-full items-center justify-between gap-4 px-3 py-2 text-left',
+  'hover:bg-neutral-5',
+  'cs-focus cs-transition',
 ]);
 
 export function AccordionTrigger(properties: AccordionPrimitive.Trigger.Props) {
@@ -57,7 +54,7 @@ export function AccordionTrigger(properties: AccordionPrimitive.Trigger.Props) {
         {...props}
       >
         {children}
-        <Icon icon={ICONS.chevronDown} className="cs-transition" />
+        <Icon icon={ICONS.add} className="cs-transition group-data-panel-open:rotate-45" />
       </AccordionPrimitive.Trigger>
     </AccordionPrimitive.Header>
   );
@@ -65,10 +62,7 @@ export function AccordionTrigger(properties: AccordionPrimitive.Trigger.Props) {
 
 /* Content */
 
-const contentClasses = cn([
-  'p-3 border-t typo-body',
-  'border-neutral-6 text-neutral-10 bg-neutral-3/50',
-]);
+const contentClasses = cn(['text-neutral-11 p-3 ']);
 
 export function AccordionContent(properties: AccordionPrimitive.Panel.Props) {
   const { className, children, ...props } = properties;
@@ -76,7 +70,7 @@ export function AccordionContent(properties: AccordionPrimitive.Panel.Props) {
   return (
     <AccordionPrimitive.Panel
       data-slot="accordion-content"
-      className="data-open:animate-accordion-down data-closed:animate-accordion-up overflow-hidden"
+      className="h-(--accordion-panel-height) overflow-hidden transition-[height] duration-200 ease-out data-ending-style:h-0 data-starting-style:h-0"
       {...props}
     >
       <div className={cn(contentClasses, className)}>

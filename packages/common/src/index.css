@@ -255,7 +255,7 @@
   }
   
 @utility cs-focus {
-    @apply outline outline-offset-0 focus-visible:outline-1 outline-accent-9;
+    @apply outline-offset-0 focus-visible:z-1 focus-visible:outline outline-accent-9;
   }
   
 @utility cs-focus-input {
@@ -269,14 +269,6 @@
 @utility cs-backdrop-panel {
   @apply border-neutralA-4 bg-neutral-1/60 text-neutral-11 backdrop-blur-lg rounded-lg border shadow-md shadow-shadows-12/25;
   }
-
-@utility animate-accordion-down {
-  animation: accordion-down 0.2s ease-out;
-}
-
-@utility animate-accordion-up {
-  animation: accordion-up 0.2s ease-out;
-}
 
 @utility animate-collapsible-down {
   animation: collapsible-down 0.2s ease-out;
@@ -293,7 +285,6 @@
 @utility digo-gradient-colors {
   @apply from-digo-lime via-digo-blue to-digo-purple;
 } 
-
 
 
 

@@ -32,6 +32,13 @@ export default tseslint.config(
     },
   },
   {
+    settings: {
+      tailwindcss: {
+        callees: ['cn', 'clsx', 'cva'],
+      },
+    },
+  },
+  {
     rules: {
       'align-assignments/align-assignments': [2],
       'align-import/align-import':           2,
