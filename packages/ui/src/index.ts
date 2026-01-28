@@ -50,3 +50,7 @@ export * from '@monorepo/ui/src/components/tint';
 /* Base UI */
 
 export * from '@monorepo/ui/src/components/base-ui/accordion';
+
+/* Native */
+
+export * from '@monorepo/ui/src/components/native/code-block';

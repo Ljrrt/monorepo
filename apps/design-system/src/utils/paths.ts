@@ -1,6 +1,4 @@
 export const PATHS = {
-  home: {
-    name: 'Home',
-    url:  '/',
-  },
+  home: '/',
+  docs: 'docs',
 };
